@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { CompletedRoutingModule } from './completed-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { CompletedComponent } from '../../components/completed/completed.component';
-
+import { CompletedComponent } from './component/completed.component';
 
 @NgModule({
   declarations: [CompletedComponent],
@@ -13,6 +11,6 @@ import { CompletedComponent } from '../../components/completed/completed.compone
     CompletedRoutingModule,
     SharedModule
   ],
-  exports: [CompletedComponent]
+  exports: [CompletedComponent],
 })
 export class CompletedModule { }

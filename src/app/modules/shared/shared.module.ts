@@ -1,19 +1,19 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SharedRoutingModule } from './shared-routing.module';
-import { SidenavComponent } from '../../components/sidenav/sidenav.component';
-import { HeaderComponent } from '../../components/common/header/header.component';
-import { TaskListComponent } from '../../components/common/task-list/task-list.component';
-import { PageNotFoundComponent } from '../../components/common/page-not-found/page-not-found.component';
-import { DropdownComponent } from '../../components/common/dropdown/dropdown.component';
-import { ModalComponent } from '../../components/modal/modal.component';
+import { SidenavComponent } from './common/sidenav/sidenav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { CommonModalComponent } from './common/modal/modal.component';
+import { SharedRoutingModule } from './shared-routing.module';
+import { HeaderComponent } from './common/header/header.component';
+import { TaskListComponent } from './common/task-list/task-list.component';
+import { PageNotFoundComponent } from './common/page-not-found/page-not-found.component';
+import { DropdownComponent } from './common/dropdown/dropdown.component';
+import { LoaderComponent } from './common/loader/loader.component';
 
 @NgModule({
-  declarations: [SidenavComponent, HeaderComponent, TaskListComponent, PageNotFoundComponent, DropdownComponent, ModalComponent],
+  declarations: [CommonModalComponent, SidenavComponent, HeaderComponent, TaskListComponent, PageNotFoundComponent, DropdownComponent, LoaderComponent],
+
   imports: [
     CommonModule,
     SharedRoutingModule,
@@ -21,7 +21,7 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     RouterModule
   ],
-  exports: [SidenavComponent, HeaderComponent, TaskListComponent, PageNotFoundComponent, DropdownComponent, ModalComponent]
+  exports: [CommonModalComponent, SidenavComponent, HeaderComponent, TaskListComponent, PageNotFoundComponent, DropdownComponent, LoaderComponent],
 })
 export class SharedModule {
 

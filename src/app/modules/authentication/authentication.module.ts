@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AuthenticationRoutingModule } from './authentication-routing.module';
-import { UserAuthenticationComponent } from '../../components/user-authentication/user-authentication.component';
+import { UserAuthenticationComponent } from './component/user-authentication.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
 
 @NgModule({
   declarations: [UserAuthenticationComponent],
@@ -16,6 +14,6 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     AuthenticationRoutingModule
   ],
-  exports: [UserAuthenticationComponent]
+  exports: [UserAuthenticationComponent],
 })
 export class AuthenticationModule { }

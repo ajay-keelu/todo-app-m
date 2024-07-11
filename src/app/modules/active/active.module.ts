@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ActiveRoutingModule } from './active-routing.module';
 import { TaskService } from '../../services/todo/task.service';
-import { ActiveComponent } from '../../components/active/active.component';
+import { ActiveComponent } from './component/active.component';
 import { SharedModule } from '../shared/shared.module';
 import { CommonModule } from '@angular/common';
 
@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     ActiveRoutingModule,
     SharedModule,
-    CommonModule
+    CommonModule,
   ], providers: [TaskService],
-  exports: [ActiveComponent]
+  exports: [ActiveComponent],
 })
 export class ActiveModule { }

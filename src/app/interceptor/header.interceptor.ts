@@ -1,12 +1,11 @@
 import {
   HttpErrorResponse,
   HttpInterceptorFn,
-  HttpRequest,
 } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { catchError, finalize, switchMap, throwError, of } from 'rxjs';
+import { catchError, finalize, switchMap, throwError } from 'rxjs';
 import { UtilityService } from '../services/utility/utility.service';
 import { AuthenticationService } from '../services/authentication/authentication.service';
 
@@ -52,7 +51,7 @@ export const headerInterceptor: HttpInterceptorFn = (req, next) => {
       }
 
       if (err.status == 0) {
-        toaster.error('server not running');
+        toaster.error('server not responding');
       }
 
       return throwError(() => err);
