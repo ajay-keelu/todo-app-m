@@ -93,3 +93,8 @@ $signUpNavLink: #ba5112;
     height: 12px;
   }
 }
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}

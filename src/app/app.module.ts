@@ -6,7 +6,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routes.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './modules/home/component/home.component';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { ActiveModule } from './modules/active/active.module';
 import { CompletedModule } from './modules/completed/completed.module';
@@ -17,11 +17,12 @@ import { provideToastr } from 'ngx-toastr';
 import { UtilityService } from './services/utility/utility.service';
 import { AuthenticationService } from './services/authentication/authentication.service';
 import { TaskService } from './services/todo/task.service';
+import { HomeModule } from './modules/home/home.module';
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -30,6 +31,7 @@ import { TaskService } from './services/todo/task.service';
     AuthenticationModule,
     DashboardModule,
     ActiveModule,
+    HomeModule,
     CompletedModule,
     AppRoutingModule,
     RouterModule

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dropdown',
@@ -11,18 +11,19 @@ export class DropdownComponent {
   curRoute: string;
   dropdown: boolean;
 
-  constructor(private router: ActivatedRoute) {
-    this.curRoute = this.router.snapshot.routeConfig?.path as string;
+  constructor(private router: Router) {
+    this.curRoute = this.router.url as string;
+    console.warn(router);
     this.dropdown = false;
     this.routes = [{
-      link: 'dashboard',
+      link: '/dashboard',
       value: 'Dashboard'
     }, {
-      link: 'active',
+      link: '/active',
       value: 'Active'
     },
     {
-      link: 'completed',
+      link: '/completed',
       value: 'Completed'
     }]
   }
